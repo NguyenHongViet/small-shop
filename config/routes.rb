@@ -4,5 +4,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
   	get 'dashboard', to: 'page#dashboard'
+    get 'account/list', to: 'page#account_list'
+    get 'account/form', to: 'page#account_form'
+    get 'account/info', to: 'page#account_info'
   end
 end
