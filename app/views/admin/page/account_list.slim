@@ -1,1 +1,65 @@
-h1 Account list
+h1 Danh sách tài khoản
+.card
+  .card-body
+    form.form-inline action="" method="post" 
+      .form-group
+        label.mr-1 for="exampleInputName2"  Tìm kiếm
+        input#exampleInputName2.form-control type="text"
+      .form-group
+        button.btn.btn-sm.btn-info Tìm kiếm
+        = link_to "/admin/account/form" do
+          button.btn.btn-sm.btn-primary Tạo mới
+
+.card
+  .card-body
+    = render 'pagination'
+    table.table.table-responsive-sm.table-striped
+      thead
+        tr
+          th Tên đăng nhập
+          th Họ tên
+          th Vị trí
+          th
+      tbody
+        tr
+          td admin
+          td Admin
+          td Quản trị viên
+          td
+            = link_to "/admin/account/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/account/form", class: "btn btn-info" do
+              i.fa.fa-edit
+        tr
+          td acc1
+          td Subadmin 1
+          td Phụ trách đơn hàng
+          td
+            = link_to "/admin/account/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/account/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa account?" } do
+              i.fa.fa-trash-o
+        tr
+          td acc2
+          td Subadmin 2
+          td Phụ trách sản phẩm
+          td
+            = link_to "/admin/account/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/account/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa account?" } do
+              i.fa.fa-trash-o
+        tr
+          td acc3
+          td Subadmin 3
+          td Chăm sóc khách hàng
+          td
+            = link_to "/admin/account/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/account/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa account?" } do
+              i.fa.fa-trash-o
