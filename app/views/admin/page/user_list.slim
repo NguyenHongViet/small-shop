@@ -1,1 +1,23 @@
-h1 User list
+h1 Danh sách khách hàng
+.card
+  .card-body
+    form.form-inline action="" method="post"
+      .form-group
+        label.mr-1 for="exampleInputName2"  Tìm kiếm
+        input#exampleInputName2.form-control type="text"
+      .form-group
+        button.btn.btn-info Tìm kiếm
+        = link_to "/admin/user/form" do
+          button.btn.btn-primary Tạo mới
+
+.card
+  .card-body
+    = render 'pagination'
+    table.table.table-responsive-sm.table-striped
+      thead
+        tr
+          th Họ tên
+          th Ngày sinh
+          th Giới tính
+          th
+      tbody

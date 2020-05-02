@@ -1,1 +1,69 @@
-h1 Product list
+h1 Danh sách sản phẩm
+.card
+  .card-body
+    form.form-inline action="" method="post"
+      .form-group
+        label.mr-1 for="exampleInputName2"  Tìm kiếm
+        input#exampleInputName2.form-control type="text"
+      .form-group
+        button.btn.btn-info Tìm kiếm
+        = link_to "/admin/product/form" do
+          button.btn.btn-primary Tạo mới
+        button.btn.btn-outline-primary Import sản phẩm
+        button.btn.btn-outline-info Export template
+
+.card
+  .card-body
+    = render 'pagination'
+    table.table.table-responsive-sm.table-striped
+      thead
+        tr
+          th Họ tên
+          th Ngày sinh
+          th Giới tính
+          th
+      tbody
+        tr
+          td Tina Knights
+          td 07/05/1992
+          td Nữ
+          td
+            = link_to "/admin/product/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/product/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa sản phẩm?" } do
+              i.fa.fa-trash-o
+        tr
+          td Denny Warren
+          td 08/01/1996
+          td Nam
+          td
+            = link_to "/admin/product/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/product/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa sản phẩm?" } do
+              i.fa.fa-trash-o
+        tr
+          td Pheobe Villanueva
+          td 06/26/1987
+          td Nữ
+          td
+            = link_to "/admin/product/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/product/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa sản phẩm?" } do
+              i.fa.fa-trash-o
+        tr
+          td Jed Rosas
+          td 07/24/1990
+          td Nam
+          td
+            = link_to "/admin/product/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/product/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa sản phẩm?" } do
+              i.fa.fa-trash-o
