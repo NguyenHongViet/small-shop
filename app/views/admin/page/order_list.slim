@@ -1,1 +1,90 @@
-h1 Order list
+h1 Danh sách đơn hàng
+.card
+  .card-body
+    form.form-inline action="" method="post"
+      .form-group
+        label.mr-1 for="exampleInputName2"  Mã đơn hàng
+        input#exampleInputName2.form-control type="text"
+      .form-group
+        label.mr-1 for="exampleInputName2"  Khách hàng
+        input#exampleInputName2.form-control type="text"
+      .form-group
+        label.mr-1 for="exampleInputName2"  Ngày đặt hàng
+        input#exampleInputName2.form-control type="date"
+      .form-group
+        button.btn.btn-info Tìm kiếm
+        = link_to "/admin/order/form" do
+          button.btn.btn-primary Tạo mới
+
+.card
+  .card-body
+    = render 'pagination'
+    table.table.table-responsive-sm.table-striped
+      thead
+        tr
+          th Mã đơn hàng
+          th Khách hàng
+          th Thời gian đặt hàng
+          th Trạng thái
+          th
+      tbody
+        tr
+          td N9TT
+          td = link_to "Tina Knights", "/admin/user/info"
+          td 02/25/2020 06:48:12 PM
+          td = select_tag :status, raw("<option>Mới nhận</option>"), class: "form-control"
+          td
+            = link_to "/admin/order/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/order/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
+              i.fa.fa-trash-o
+        tr
+          td 9G0A
+          td = link_to "Denny Warren", "/admin/user/info"
+          td 03/26/2020 02:09:15 PM
+          td = select_tag :status, raw("<option>Giao hàng</option>"), class: "form-control"
+          td
+            = link_to "/admin/order/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/order/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
+              i.fa.fa-trash-o
+        tr
+          td B7FQ
+          td = link_to "Pheobe Villanueva", "/admin/user/info"
+          td 03/16/2020 04:02:20 AM
+          td = select_tag :status, raw("<option>Hoàn thành</option>"), class: "form-control"
+          td
+            = link_to "/admin/order/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/order/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
+              i.fa.fa-trash-o
+        tr
+          td RANC
+          td = link_to "Jed Rosas", "/admin/user/info"
+          td 01/21/2020 07:15:28 AM
+          td = select_tag :status, raw("<option>Mới nhận</option><option>Giao hàng</option><option>Hoàn thành</option><option>Hủy bỏ</option>"), class: "form-control"
+          td
+            = link_to "/admin/order/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/order/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
+              i.fa.fa-trash-o
+        tr
+          td CHYK
+          td = link_to "Wren Halliday", "/admin/user/info"
+          td 03/13/2020 01:16:24 AM
+          td = select_tag :status, raw("<option>Hủy bỏ</option>"), class: "form-control"
+          td
+            = link_to "/admin/order/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/order/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
+              i.fa.fa-trash-o
