@@ -18,5 +18,104 @@ h1 Danh sách sản phẩm
     table.table.table-responsive-sm.table-striped
       thead
         tr
+          td Tên
+          td Category
+          td Số lượng
+          td Publish
+          td
       tbody
         tr
+          td Product A
+          td Laptop
+          td
+            form.form-inline action="" method="post"
+              .form-group
+                = number_field_tag :quanlity, 1, class: "form-control"
+              .form-group
+                = link_to "#", class: "btn btn-success" do
+                  i.fa.fa-save
+          td
+            = button_tag "Đăng bài", class: "btn btn-success"
+          td
+            = link_to "/admin/product/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/product/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa product?" } do
+              i.fa.fa-trash-o
+        tr
+          td Product B
+          td Điện thoại
+          td
+            form.form-inline action="" method="post"
+              .form-group
+                = number_field_tag :quanlity, 2, class: "form-control"
+              .form-group
+                = link_to "#", class: "btn btn-success" do
+                  i.fa.fa-save
+          td
+            = button_tag "Gỡ xuống", class: "btn btn-danger"
+          td
+            = link_to "/admin/product/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/product/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa product?" } do
+              i.fa.fa-trash-o
+        tr
+          td Product C
+          td Laptop
+          td
+            form.form-inline action="" method="post"
+              .form-group
+                = number_field_tag :quanlity, 3, class: "form-control"
+              .form-group
+                = link_to "#", class: "btn btn-success" do
+                  i.fa.fa-save
+          td
+            = button_tag "Đăng bài", class: "btn btn-success"
+          td
+            = link_to "/admin/product/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/product/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa product?" } do
+              i.fa.fa-trash-o
+        tr
+          td Product D
+          td Máy ảnh
+          td
+            form.form-inline action="" method="post"
+              .form-group
+                = number_field_tag :quanlity, 4, class: "form-control"
+              .form-group
+                = link_to "#", class: "btn btn-success" do
+                  i.fa.fa-save
+          td
+            = button_tag "Đăng bài", class: "btn btn-success"
+          td
+            = link_to "/admin/product/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/product/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa product?" } do
+              i.fa.fa-trash-o
+        tr
+          td Product E
+          td Laptop
+          td
+            form.form-inline action="" method="post"
+              .form-group
+                = number_field_tag :quanlity, 5, class: "form-control"
+              .form-group
+                = link_to "#", class: "btn btn-success" do
+                  i.fa.fa-save
+          td
+            = button_tag "Gỡ xuống", class: "btn btn-danger"
+          td
+            = link_to "/admin/product/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/product/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa product?" } do
+              i.fa.fa-trash-o
