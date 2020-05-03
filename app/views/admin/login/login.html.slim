@@ -1,0 +1,13 @@
+.card
+  .card-header Đăng nhập
+  .card-body
+    form action="" method="post" 
+      .form-group
+        label for="nf-email" Username
+        input#nf-email.form-control type="text"
+      .form-group
+        label for="nf-password" Password
+        input#nf-password.form-control type="password"
+  .card-footer.text-center
+    = link_to "/admin/account/list" do
+      button.btn.btn-primary type="button" Login
