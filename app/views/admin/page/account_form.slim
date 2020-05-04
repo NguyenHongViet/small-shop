@@ -1,1 +1,30 @@
-h1 Account form
+h1.py-2 Đăng ký tài khoản
+
+.card
+  .card-body
+    form.form-horizontal action="" enctype="multipart/form-data" method="post"
+      .form-group.row
+        label.col-md-3.col-form-label Tên đăng nhập
+        .col-md-9
+          = text_field_tag :username, nil, placeholder: "Tên đăng nhập", class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Email
+        .col-md-9
+          = text_field_tag :username, nil, placeholder: "Email", class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Password
+        .col-md-9
+          = password_field_tag :password, nil, class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Password Confirmation
+        .col-md-9
+          = password_field_tag :password_confirmation, nil, class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Vị trí
+        .col-md-9
+          = select_tag :position, raw("<option>Quản lý</option><option>Cộng tác viên</option><option>...</option>"), class: "form-control"
+  .card-footer.text-center
+    = link_to "/admin/account/list" do
+      button.btn.btn-primary type="button" Submit
+    = link_to "/admin/account/list" do
+      button.btn.btn-secondary type="button" Cancel

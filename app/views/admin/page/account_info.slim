@@ -1,1 +1,17 @@
-h1 Account info
+h1.py-2 Thông tin tài khoản
+
+.card
+  .card-body
+    form.form-horizontal action="" enctype="multipart/form-data" method="post"
+      .form-group.row
+        label.col-md-3.col-form-label Tên đăng nhập
+        .col-md-9 Admin
+      .form-group.row
+        label.col-md-3.col-form-label Email
+        .col-md-9 admin@example.com
+      .form-group.row
+        label.col-md-3.col-form-label Vị trí
+        .col-md-9 Quản lý
+  .card-footer.text-center
+    = link_to "/admin/account/form" do
+      button.btn.btn-primary type="button" Chỉnh sửa
