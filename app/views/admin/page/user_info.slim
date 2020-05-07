@@ -1,1 +1,47 @@
-h1 User info
+h1.py-2 Thông tin khách hàng
+
+.card
+  .card-header Thông tin cá nhân
+  .card-body
+    form.form-horizontal action="" enctype="multipart/form-data" method="post"
+      .form-group.row
+        label.col-md-3.col-form-label Họ tên
+        .col-md-9 Tina Knights
+      .form-group.row
+        label.col-md-3.col-form-label Email
+        .col-md-9 user@example.com
+      .form-group.row
+        label.col-md-3.col-form-label Facebook
+        .col-md-9 = link_to "facebook.com", "facebook.com"
+      .form-group.row
+        label.col-md-3.col-form-label Ngày sinh
+        .col-md-9 07/05/1992
+      .form-group.row
+        label.col-md-3.col-form-label Giới tính
+        .col-md-9 Nữ
+  .card-footer.text-center
+    = link_to "/admin/account/form" do
+      button.btn.btn-primary type="button" Chỉnh sửa
+
+.card
+  .card-header Lịch sử giao dịch
+  .card-body
+    table.table.table-responsive-sm.table-striped
+      thead
+        tr
+          th Mã đơn hàng
+          th Thời gian đặt hàng
+          th Trạng thái
+          th
+      tbody
+        tr
+          td N9TT
+          td 02/25/2020 06:48:12 PM
+          td = select_tag :status, raw("<option>Mới nhận</option>"), class: "form-control"
+          td
+            = link_to "/admin/order/info", class: "btn btn-success" do
+              i.fa.fa-search-plus
+            = link_to "/admin/order/form", class: "btn btn-info" do
+              i.fa.fa-edit
+            = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
+              i.fa.fa-trash-o

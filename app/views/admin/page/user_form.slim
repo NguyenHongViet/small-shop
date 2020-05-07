@@ -1,1 +1,36 @@
-h1 User form
+h1.py-2 Tạo khách hàng mới
+
+.card
+  .card-body
+    form.form-horizontal action="" enctype="multipart/form-data" method="post"
+      .form-group.row
+        label.col-md-3.col-form-label Họ tên
+        .col-md-9
+          = text_field_tag :username, nil, placeholder: "Họ tên", class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Email
+        .col-md-9
+          = text_field_tag :username, nil, placeholder: "Email", class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Facebook
+        .col-md-9
+          = text_field_tag :username, nil, placeholder: "Facebook", class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Ngày sinh
+        .col-md-9
+          = text_field_tag :username, nil, type: "date", class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Giới tính
+        .col-md-9
+          label.form-check.form-check-inline.mr-1
+            input#inline-radio1.form-check-input name="inline-radios" type="radio" value="male"
+            .form-check-label for="inline-radio1" Nam
+          label.form-check.form-check-inline.mr-1
+            input#inline-radio1.form-check-input name="inline-radios" type="radio" value="female"
+            .form-check-label for="inline-radio1" Nữ
+      
+  .card-footer.text-center
+    = link_to "/admin/user/list" do
+      button.btn.btn-primary type="button" Submit
+    = link_to "/admin/user/list" do
+      button.btn.btn-secondary type="button" Cancel
