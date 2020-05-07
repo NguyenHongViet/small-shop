@@ -34,10 +34,8 @@ h1.py-2 Danh sách đơn hàng
           td 02/25/2020 06:48:12 PM
           td = select_tag :status, raw("<option>Mới nhận</option>"), class: "form-control"
           td
-            = link_to "/admin/order/info", class: "btn btn-success" do
+            = link_to "/admin/order/form", class: "btn btn-success" do
               i.fa.fa-search-plus
-            = link_to "/admin/order/form", class: "btn btn-info" do
-              i.fa.fa-edit
             = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
               i.fa.fa-trash-o
         tr
@@ -46,10 +44,8 @@ h1.py-2 Danh sách đơn hàng
           td 03/26/2020 02:09:15 PM
           td = select_tag :status, raw("<option>Giao hàng</option>"), class: "form-control"
           td
-            = link_to "/admin/order/info", class: "btn btn-success" do
+            = link_to "/admin/order/form", class: "btn btn-success" do
               i.fa.fa-search-plus
-            = link_to "/admin/order/form", class: "btn btn-info" do
-              i.fa.fa-edit
             = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
               i.fa.fa-trash-o
         tr
@@ -58,10 +54,8 @@ h1.py-2 Danh sách đơn hàng
           td 03/16/2020 04:02:20 AM
           td = select_tag :status, raw("<option>Hoàn thành</option>"), class: "form-control"
           td
-            = link_to "/admin/order/info", class: "btn btn-success" do
+            = link_to "/admin/order/form", class: "btn btn-success" do
               i.fa.fa-search-plus
-            = link_to "/admin/order/form", class: "btn btn-info" do
-              i.fa.fa-edit
             = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
               i.fa.fa-trash-o
         tr
@@ -70,10 +64,8 @@ h1.py-2 Danh sách đơn hàng
           td 01/21/2020 07:15:28 AM
           td = select_tag :status, raw("<option>Mới nhận</option><option>Giao hàng</option><option>Hoàn thành</option><option>Hủy bỏ</option>"), class: "form-control"
           td
-            = link_to "/admin/order/info", class: "btn btn-success" do
+            = link_to "/admin/order/form", class: "btn btn-success" do
               i.fa.fa-search-plus
-            = link_to "/admin/order/form", class: "btn btn-info" do
-              i.fa.fa-edit
             = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
               i.fa.fa-trash-o
         tr
@@ -82,9 +74,7 @@ h1.py-2 Danh sách đơn hàng
           td 03/13/2020 01:16:24 AM
           td = select_tag :status, raw("<option>Hủy bỏ</option>"), class: "form-control"
           td
-            = link_to "/admin/order/info", class: "btn btn-success" do
+            = link_to "/admin/order/form", class: "btn btn-success" do
               i.fa.fa-search-plus
-            = link_to "/admin/order/form", class: "btn btn-info" do
-              i.fa.fa-edit
             = link_to "#", class: "btn btn-danger", data: { confirm: "Bạn có muốn xóa đơn hàng?" } do
               i.fa.fa-trash-o

@@ -21,7 +21,5 @@ class Admin::PageController < ApplicationController
 
   def order_list; end
 
-  def order_info; end
-
   def order_form; end
 end

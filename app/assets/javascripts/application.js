@@ -14,3 +14,4 @@
 //= require turbolinks
 //= require_tree .
 //= require coreui-free
+//= require select2

@@ -1,1 +1,66 @@
-h1 Order form
+h1.py-2 Chi tiết đơn hàng
+
+.card
+  .card-body
+    form.form-horizontal action="" enctype="multipart/form-data" method="post"
+      .form-group.row
+        label.col-md-3.col-form-label Mã đơn hàng
+        .col-md-9
+          = text_field_tag :code, "ABCD", disabled: true, class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Khách hàng
+        .col-md-9
+          = select_tag :user, raw("<option>Tina Knights</option><option>Denny Warren</option><option>Pheobe Villanueva</option><option>Jed Rosas</option><option>Wren Halliday</option>"), class: "form-control select2"
+      .form-group.row
+        label.col-md-3.col-form-label Danh sách sản phẩm
+        .col-md-6
+          = select_tag :product, raw("<option>Product A</option><option>Product B</option><option>Product C</option><option>Product D</option><option>Product E</option>"), class: "form-control select2"
+        .col-md-3
+          = button_tag "Thêm sản phẩm", class: "btn btn-primary"
+      .form-group.row
+        .col-md-3
+        .col-md-9
+          table.table.table-responsive-sm.table-striped
+            thead
+              tr
+                td Tên
+                td Category
+                td Số lượng
+                td Đơn giá
+                td Thành tiền
+                td
+            tbody
+              tr
+                td Product A
+                td Laptop
+                td = number_field_tag :quanlity, 1, class: "form-control"
+                td xxx
+                td 8888
+                td
+                  = link_to "#", class: "btn btn-danger" do
+                    i.fa.fa-trash-o
+              tr
+                td Product C
+                td Laptop
+                td = number_field_tag :quanlity, 1, class: "form-control"
+                td xxx
+                td 8888
+                td
+                  = link_to "#", class: "btn btn-danger" do
+                    i.fa.fa-trash-o
+              tr.strong[style="background: lightgray"]
+                td Tổng
+                td
+                td
+                td
+                td 88888
+                td
+
+  .card-footer.text-center
+    = link_to "/admin/order/list" do
+      button.btn.btn-primary type="button" Save
+    = link_to "/admin/order/list" do
+      button.btn.btn-secondary type="button" Cancel
+
+javascript:
+  $('.select2').select2({theme: "bootstrap"})
