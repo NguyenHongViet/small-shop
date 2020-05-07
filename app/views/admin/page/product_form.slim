@@ -1,1 +1,34 @@
-h1 Product form
+h1.py-2 Tạo sản phẩm mới
+
+.card
+  .card-body
+    form.form-horizontal action="" enctype="multipart/form-data" method="post"
+      .form-group.row
+        label.col-md-3.col-form-label Tên sản phẩm
+        .col-md-9
+          = text_field_tag :username, nil, placeholder: "Tên sản phẩm", class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Category
+        .col-md-9
+          = select_tag :category, raw("<option>Máy tính</option><option>Điện thoại</option><option>...</option>"), class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Mô tả sản phẩm
+        .col-md-9
+          = text_area :desc, nil, placeholder: "Mô tả sản phẩm", rows: 10, class: "form-control"
+      .form-group.row
+        label.col-md-3.col-form-label Ảnh đại diện
+        .col-md-9
+          = file_field_tag :logo
+      .form-group.row
+        label.col-md-3.col-form-label Ảnh chi tiết
+        .col-md-9
+          = file_field_tag :images, multiple: true
+
+
+  .card-footer.text-center
+    = link_to "/admin/product/list" do
+      button.btn.btn-primary type="button" Submit
+    = link_to "#" do
+      button.btn.btn-info type="button" Preview
+    = link_to "/admin/product/list" do
+      button.btn.btn-secondary type="button" Cancel

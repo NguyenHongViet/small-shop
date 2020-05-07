@@ -1,1 +1,39 @@
-h1 Product info
+h1.py-2 Chi tiết sản phẩm
+
+.card
+  .card-body
+    form.form-horizontal action="" enctype="multipart/form-data" method="post"
+      .form-group.row
+        label.col-md-3.col-form-label Tên sản phẩm
+        .col-md-9 Product A
+      .form-group.row
+        label.col-md-3.col-form-label Category
+        .col-md-9 Máy tính
+      .form-group.row
+        label.col-md-3.col-form-label Số lượng
+        .col-md-5
+          .form-inline
+            .form-group
+              = number_field_tag :quanlity, 1, class: "form-control"
+            .form-group
+              = link_to "#", class: "btn btn-success" do
+                i.fa.fa-save
+      .form-group.row
+        label.col-md-3.col-form-label Mô tả sản phẩm
+        .col-md-9 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .form-group.row
+        label.col-md-3.col-form-label Ảnh đại diện
+        .col-md-9
+          = image_tag "https://dummyimage.com/300x200/000/fff.jpg&text=image"
+      .form-group.row
+        label.col-md-3.col-form-label Ảnh chi tiết
+        .col-md-9
+          = image_tag "https://dummyimage.com/300x200/000/fff.jpg&text=image", class: "p-1"
+          = image_tag "https://dummyimage.com/300x200/000/fff.jpg&text=image", class: "p-1"
+          = image_tag "https://dummyimage.com/300x200/000/fff.jpg&text=image", class: "p-1"
+
+  .card-footer.text-center
+    = link_to "#" do
+      button.btn.btn-info type="button" Preview
+    = button_tag "Đăng bài", class: "btn btn-success"
+    = button_tag "Gỡ xuống", class: "btn btn-danger"
