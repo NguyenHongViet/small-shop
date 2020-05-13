@@ -28,12 +28,45 @@
           <ul class="nav">
             <li class="nav-item">
               <%= link_to "Dashboard", "/admin/dashboard", class: "nav-link #{'active' if yield(:tab) == 'dashboard'}" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "Tài khoản", "/admin/account/list", class: "nav-link #{'active' if yield(:tab) == 'account'}" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "Khách hàng", "/admin/user/list", class: "nav-link #{'active' if yield(:tab) == 'user'}" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "Sản phẩm", "/admin/product/list", class: "nav-link #{'active' if yield(:tab) == 'product'}" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "Đơn hàng", "/admin/order/list", class: "nav-link #{'active' if yield(:tab) == 'order'}" %>
+            </li>
+            <li class="nav-item nav-dropdown <%= 'open' if ['coupon', 'sale'].include?(yield(:tab)) %>">
+              <a href="#" class="nav-link nav-dropdown-toggle">Khuyến mãi</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <%= link_to "Coupon", "#", class: "nav-link #{'active' if yield(:tab) == 'coupon'}" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Khuyến mãi", "#", class: "nav-link #{'active' if yield(:tab) == 'sale'}" %>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown <%= 'open' if ['template', 'email'].include?(yield(:tab)) %>">
+              <a href="#" class="nav-link nav-dropdown-toggle">Email</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <%= link_to "Email template", "#", class: "nav-link #{'active' if yield(:tab) == 'template'}" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Email", "#", class: "nav-link #{'active' if yield(:tab) == 'email'}" %>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
               <%= link_to "Thống kê", "#", class: "nav-link" %>
-              <%= link_to "Coupon", "#", class: "nav-link" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "Setting", "#", class: "nav-link" %>
             </li>
           </ul>
@@ -45,5 +78,11 @@
         </div>
       </main>
     </div>
+    <script type="text/javascript">
+      $('a.nav-dropdown-toggle').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('open');
+      })
+    </script>
   </body>
 </html>
