@@ -1,3 +1,5 @@
+= provide :tab, :user
+
 h1.py-2 Danh sách khách hàng
 .card
   .card-body
@@ -16,9 +18,15 @@ h1.py-2 Danh sách khách hàng
     table.table.table-responsive-sm.table-striped
       thead
         tr
-          th Họ tên
-          th Ngày sinh
-          th Giới tính
+          th
+            | Họ tên
+            i.fa.fa-sort.fa-lg.float-right.pt-1
+          th
+            | Ngày sinh
+            i.fa.fa-sort.fa-lg.float-right.pt-1
+          th
+            | Giới tính
+            i.fa.fa-sort.fa-lg.float-right.pt-1
           th
       tbody
         tr

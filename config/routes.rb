@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get 'login', to: 'login#login'
     get 'password', to: 'login#password'
 
+    get 'dashboard', to: "page#dashboard"
     get 'account/list', to: 'page#account_list'
     get 'account/form', to: 'page#account_form'
     get 'account/info', to: 'page#account_info'

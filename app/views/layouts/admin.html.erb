@@ -27,10 +27,11 @@
         <nav class="sidebar-nav ps">
           <ul class="nav">
             <li class="nav-item">
-              <%= link_to "Tài khoản", "/admin/account/list", class: "nav-link" %>
-              <%= link_to "Khách hàng", "/admin/user/list", class: "nav-link" %>
-              <%= link_to "Sản phẩm", "/admin/product/list", class: "nav-link" %>
-              <%= link_to "Đơn hàng", "/admin/order/list", class: "nav-link" %>
+              <%= link_to "Dashboard", "/admin/dashboard", class: "nav-link #{'active' if yield(:tab) == 'dashboard'}" %>
+              <%= link_to "Tài khoản", "/admin/account/list", class: "nav-link #{'active' if yield(:tab) == 'account'}" %>
+              <%= link_to "Khách hàng", "/admin/user/list", class: "nav-link #{'active' if yield(:tab) == 'user'}" %>
+              <%= link_to "Sản phẩm", "/admin/product/list", class: "nav-link #{'active' if yield(:tab) == 'product'}" %>
+              <%= link_to "Đơn hàng", "/admin/order/list", class: "nav-link #{'active' if yield(:tab) == 'order'}" %>
               <%= link_to "Thống kê", "#", class: "nav-link" %>
               <%= link_to "Coupon", "#", class: "nav-link" %>
               <%= link_to "Setting", "#", class: "nav-link" %>

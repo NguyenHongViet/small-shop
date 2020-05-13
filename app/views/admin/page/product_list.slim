@@ -1,3 +1,5 @@
+= provide :tab, :product
+
 h1.py-2 Danh sách sản phẩm
 .card
   .card-body
@@ -18,10 +20,18 @@ h1.py-2 Danh sách sản phẩm
     table.table.table-responsive-sm.table-striped
       thead
         tr
-          td Tên
-          td Category
-          td Số lượng
-          td Publish
+          td
+            | Tên
+            i.fa.fa-sort.fa-lg.float-right.pt-1
+          td
+            | Category
+            i.fa.fa-sort.fa-lg.float-right.pt-1
+          td
+            | Số lượng
+            i.fa.fa-sort.fa-lg.float-right.pt-1
+          td
+            | Publish
+            i.fa.fa-sort.fa-lg.float-right.pt-1
           td
       tbody
         tr

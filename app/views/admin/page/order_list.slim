@@ -1,3 +1,5 @@
+= provide :tab, :order
+
 h1.py-2 Danh sách đơn hàng
 .card
   .card-body
@@ -22,10 +24,18 @@ h1.py-2 Danh sách đơn hàng
     table.table.table-responsive-sm.table-striped
       thead
         tr
-          th Mã đơn hàng
-          th Khách hàng
-          th Thời gian đặt hàng
-          th Trạng thái
+          th
+            | Mã đơn hàng
+            i.fa.fa-sort.fa-lg.float-right.pt-1
+          th
+            | Khách hàng
+            i.fa.fa-sort.fa-lg.float-right.pt-1
+          th
+            | Thời gian đặt hàng
+            i.fa.fa-sort.fa-lg.float-right.pt-1
+          th
+            | Trạng thái
+            i.fa.fa-sort.fa-lg.float-right.pt-1
           th
       tbody
         tr

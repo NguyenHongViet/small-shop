@@ -1,6 +1,8 @@
 class Admin::PageController < ApplicationController
   layout 'admin'
 
+  def dashboard; end
+
   def account_list; end
 
   def account_info; end
