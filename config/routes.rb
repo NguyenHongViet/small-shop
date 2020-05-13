@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'admin/login#login'
-
   namespace :admin do
+    root to: 'login#login'
+
     get 'login', to: 'login#login'
     get 'password', to: 'login#password'
 
@@ -20,4 +19,9 @@ Rails.application.routes.draw do
     get 'order/form', to: 'page#order_form'
     get 'order/info', to: 'page#order_info'
   end
+
+  root to: 'page#home'
+
+  get 'home', to: 'page#home'
+  get 'product', to: 'page#product'
 end
