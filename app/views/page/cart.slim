@@ -1,0 +1,100 @@
+.container
+  .row
+    .col-sm-12.col-md-10.col-md-offset-1
+      table.table.table-hover
+        thead
+          tr
+            th Product
+            th Quantity
+            th.text-center Price
+            th.text-center Total
+            th
+        tbody
+          tr
+            td.col-md-6
+              .media
+                a.thumbnail.pull-left href="/product" 
+                  img.media-object src="http://placehold.it/70x40"
+                .media-body Product 1
+            td.col-md-1 style=("text-align: center") 
+              input#exampleInputEmail1.form-control type="email" value="3"
+            td.col-md-1.text-center
+              strong $4.87
+            td.col-md-1.text-center
+              strong $14.61
+            td.col-md-1
+              button.btn.btn-danger type="button" 
+                span.glyphicon.glyphicon-remove
+                | Remove
+          tr
+            td.col-md-6
+              .media
+                a.thumbnail.pull-left href="/product" 
+                  img.media-object src="http://placehold.it/70x40"
+                .media-body Product 2
+            td.col-md-1 style=("text-align: center") 
+              input#exampleInputEmail1.form-control type="email" value="2"
+            td.col-md-1.text-center
+              strong $4.99
+            td.col-md-1.text-center
+              strong $9.98
+            td.col-md-1
+              button.btn.btn-danger type="button" 
+                span.glyphicon.glyphicon-remove
+                | Remove
+          tr
+            td
+            td
+            td
+            td
+              h5 Subtotal
+            td.text-right
+              h5
+                strong $24.59
+          tr
+            td
+            td
+            td
+            td
+              h5 Estimated shipping
+            td.text-right
+              h5
+                strong $6.94
+          tr
+            td
+            td
+            td
+            td
+              = text_field_tag :coupon, nil, class: "form-control"
+            td
+              button.btn.btn-success type="button" 
+                | Apply coupon
+                span.glyphicon.glyphicon-play
+          tr
+            td
+            td
+            td
+            td
+              h5 Discount
+            td.text-right
+              h5
+                strong - $0.99
+          tr
+            td
+            td
+            td
+            td
+              h3 Total
+            td.text-right
+              h3
+                strong $30.54
+          tr
+            td
+            td
+            td
+            td
+              = link_to "Continue Shopping", "/", class: "btn btn-secondary"
+            td
+              button.btn.btn-success type="button" 
+                | Checkout
+                span.glyphicon.glyphicon-play

@@ -24,4 +24,5 @@ Rails.application.routes.draw do
 
   get 'home', to: 'page#home'
   get 'product', to: 'page#product'
+  get 'cart', to: 'page#cart'
 end
