@@ -1,0 +1,30 @@
+.card.mt-4
+  .card-body
+    h2.pb-2 Địa chỉ vận chuyển
+    form
+      .form-group.row
+        label.col-sm-2.col-form-label Địa chỉ đã lưu
+        .col-sm-10
+          select.form-control
+            option Địa chỉ mới
+            option Địa chỉ 1
+            option Địa chỉ 2
+            option ...
+      .form-group.row
+        label.col-sm-2.col-form-label Địa chỉ
+        .col-sm-10
+          input.form-control type="text" value="Địa chỉ đang chọn"
+          .mapouter.pt-2
+            .gmap_canvas
+              iframe#gmap_canvas frameborder="0" height="500" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=h%C3%A0%20n%E1%BB%99i&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" 
+      .form-group.row
+        label.col-sm-2.col-form-label Phí vận chuyển
+        label.col-sm-10.col-form-label $5.55
+      .form-group.row
+        .col-sm-2
+          = link_to "Quay lại", "/cart", class: "btn btn-secondary"
+        .col-sm-10.float-right
+          = link_to "Tiếp tục", "/payment", class: "btn btn-success float-right"
+
+css:
+  .mapouter position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px; 

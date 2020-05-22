@@ -4,4 +4,10 @@ class PageController < ApplicationController
   def product; end
 
   def cart; end
+
+  def transport; end
+
+  def payment; end
+
+  def success; end
 end
