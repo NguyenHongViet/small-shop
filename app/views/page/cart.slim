@@ -4,97 +4,84 @@
       table.table.table-hover
         thead
           tr
-            th Product
-            th Quantity
-            th.text-center Price
-            th.text-center Total
-            th
+            th.col-md-4 Sản phẩm
+            th.col-md-2 Số lượng
+            th.col-md-1.text-center Đơn giá
+            th.col-md-1.text-center Thành tiền
+            th.col-md-1
         tbody
           tr
-            td.col-md-6
+            td
               .media
-                a.thumbnail.pull-left href="/product" 
+                a.thumbnail.pull-left href="/product"
                   img.media-object src="http://placehold.it/70x40"
-                .media-body Product 1
-            td.col-md-1 style=("text-align: center") 
-              input#exampleInputEmail1.form-control type="email" value="3"
-            td.col-md-1.text-center
+                .media-body
+                  | Sản phẩm 1
+                  br
+                  | Mô tả
+            td style=("text-align: center") 
+              input.form-control type="number" value="3"
+            td.text-center
               strong $4.87
-            td.col-md-1.text-center
+            td.text-center
               strong $14.61
-            td.col-md-1
+            td
               button.btn.btn-danger type="button" 
                 span.glyphicon.glyphicon-remove
-                | Remove
+                | Xóa
           tr
-            td.col-md-6
+            td
               .media
-                a.thumbnail.pull-left href="/product" 
+                a.thumbnail.pull-left href="/product"
                   img.media-object src="http://placehold.it/70x40"
-                .media-body Product 2
-            td.col-md-1 style=("text-align: center") 
-              input#exampleInputEmail1.form-control type="email" value="2"
-            td.col-md-1.text-center
+                .media-body
+                  | Sản phẩm 2
+                  br
+                  | Mô tả
+            td style=("text-align: center") 
+              input.form-control type="number" value="2"
+            td.text-center
               strong $4.99
-            td.col-md-1.text-center
+            td.text-center
               strong $9.98
-            td.col-md-1
+            td
               button.btn.btn-danger type="button" 
                 span.glyphicon.glyphicon-remove
-                | Remove
+                | Xóa
+      table.table.table-hover
+        tbody
           tr
+            td.col-md-5
             td
-            td
-            td
-            td
-              h5 Subtotal
+              h5 Tổng giá trị
             td.text-right
               h5
-                strong $24.59
+                strong $23.60
           tr
-            td
-            td
-            td
-            td
-              h5 Estimated shipping
-            td.text-right
-              h5
-                strong $6.94
-          tr
-            td
-            td
             td
             td
               = text_field_tag :coupon, nil, class: "form-control"
             td
               button.btn.btn-success type="button" 
-                | Apply coupon
+                | Sử dụng coupon
                 span.glyphicon.glyphicon-play
           tr
             td
             td
-            td
-            td
-              h5 Discount
+              h5 Giảm giá
             td.text-right
               h5
                 strong - $0.99
           tr
             td
             td
-            td
-            td
-              h3 Total
+              h3 Tổng tiền
             td.text-right
               h3
                 strong $30.54
           tr
             td
             td
+              = link_to "Tiếp tục mua hàng", "/", class: "btn btn-secondary"
             td
-            td
-              = link_to "Continue Shopping", "/", class: "btn btn-secondary"
-            td
-              button.btn.btn-success type="button" 
-                | Checkout
-                span.glyphicon.glyphicon-play
+              = link_to "Checkout", "/transport", class: "btn btn-success"

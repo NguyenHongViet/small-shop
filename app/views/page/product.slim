@@ -1,15 +1,38 @@
 .card.mt-4
-  img.card-img-top.img-fluid alt="" src="http://placehold.it/900x400" /
   .card-body
-    h3.card-title Product Name
-    h4 $24.99
-    p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!
-    span.text-warning ★ ★ ★ ★ ☆
-    | 4.0 stars
-    a.btn.btn-success.float-right href="/cart"  Add to cart
+    .row
+      .col-md-4
+        img.card-img-top alt="" src="http://placehold.it/700x400"
+        .row.pt-3
+          .col-sm-4
+            img.card-img-top alt="" src="http://placehold.it/70x40"
+          .col-sm-4
+            img.card-img-top alt="" src="http://placehold.it/70x40"
+          .col-sm-4
+            img.card-img-top alt="" src="http://placehold.it/70x40"
+      .col.md-8
+        h3.card-title Tên sản phẩm
+        span.text-warning ★ ★ ★ ★ ☆
+        p.card-text.border.px-1.py-4 Mô tả ngắn
+        h4 Giá: $24.99
+        form.form-inline.float-right.pt-3
+          label.mx-1 Số lượng
+          input.form-control.mx-1 type="number" value="2"
+          a.btn.btn-success.mx-1 href="#" Thêm vào giỏ hàng
+          i.fa.fa-heart.mx-1
 .card.card-outline-secondary.my-4
   .card-header
-    | Product Reviews
+    | Thông số kĩ thuật
+  .card-body
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.
+.card.card-outline-secondary.my-4
+  .card-header
+    | Mô tả chi tiết
+  .card-body
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.
+.card.card-outline-secondary.my-4
+  .card-header
+    | Đánh giá và hỏi đáp
   .card-body
     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.
     small.text-muted Posted by Anonymous on 3/1/17
@@ -17,7 +40,4 @@
     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.
     small.text-muted Posted by Anonymous on 3/1/17
     hr/
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.
-    small.text-muted Posted by Anonymous on 3/1/17
-    hr/
-    a.btn.btn-success href="#"  Leave a Review
+    a.btn.btn-success href="#" Đăng review
