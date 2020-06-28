@@ -1,0 +1,30 @@
+button.btn-questions Câu hỏi
+.question
+
+javascript:
+  questions_list = [
+    "Công việc kiếm ra tiền đầu tiên của bạn là gì?",
+    "Bạn đã từng gặp người nổi tiếng nào chưa?",
+    "Hiện giờ bạn đang đọc/nghiên cứu về cái gì?",
+    "Nếu được chọn một siêu năng lực, bạn sẽ chọn gì?",
+    "Bạn ngưỡng mộ/thần tượng ai nhất?",
+    "Gần đây bạn có em bộ phim nào hay không?",
+    "Câu nói ưa thích của bạn là gì?",
+    "Gần đây bạn có niềm vui bất ngờ nào không?",
+    "Ban nhạc/ca sĩ ưa thích của bạn thời thiếu niên của bạn là gì?",
+    "Gần đây bạn có đi đâu chơi không?",
+    "Hoạt động ưa thích của bạn cùng với gia đình là gì?",
+    "Ai là người có ảnh hưởng lớn nhất trong quá trình trưởng thành của bạn?",
+    "Thứ đầu tiên bạn mua bằng tiền của mình là gì?",
+    "Trong tương lai gần, bạn định làm điều gì đó bạn chưa từng làm?",
+    "Trong những nơi bạn đã từng đến, bạn thích nhất nơi nào?",
+    "Lời khuyên bổ ích nhất mà bạn đã từng nghe là gì?",
+    "Bữa sáng ưa thích của bạn là gì?",
+    "Bạn sợ nhất con/cái gì?",
+    "Bạn thích sưu tầm thứ gì?",
+    "Bạn tự hào nhất về điều gì ở bản thân?"
+  ]
+  $(".btn-questions").on("click", function() {
+    index = Math.floor(Math.random() * questions_list.length);
+    $(".question").html(questions_list[index]);
+  })

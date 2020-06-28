@@ -28,4 +28,5 @@ Rails.application.routes.draw do
   get 'transport', to: 'page#transport'
   get 'payment', to: 'page#payment'
   get 'success', to: 'page#success'
+  get 'questions', to: 'page#questions'
 end

@@ -10,4 +10,8 @@ class PageController < ApplicationController
   def payment; end
 
   def success; end
+
+  def questions
+    render layout: "normal"
+  end
 end
