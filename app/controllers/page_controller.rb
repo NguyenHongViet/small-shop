@@ -12,6 +12,6 @@ class PageController < ApplicationController
   def success; end
 
   def questions
-    render layout: "normal"
+    render layout: "login"
   end
 end
