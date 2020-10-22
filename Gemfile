@@ -19,11 +19,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'coreui-rails'
 gem 'slim-rails'
 gem 'select2-rails'
+gem 'dotenv-rails'
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 group :development do
